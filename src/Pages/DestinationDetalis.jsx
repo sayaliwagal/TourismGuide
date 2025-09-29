@@ -10,16 +10,21 @@ const DestinationDetalis = () => {
     const data = tourismData.find((item) => {
         return item.id === id;
     })
-    console.log(data)
-    if(!data){
-      return (<h1>Data not found please try after sometime...</h1>)
-    }
   return (
-    <div>
-      <h1><label>City:-</label>{data.name}</h1>
-      <p><label>Description:-</label>{data.description}</p>
-      <p><label>Tip:-</label>{data.tips}</p>
-    </div>
+    <div className='home'>
+    {!data ? (
+      <div className="not-found">
+        <h2>⚠️ Data not found</h2>
+        <p>Please try again after sometime...</p>
+      </div>
+    ) : (
+      <div className="city-card">
+        <h1 className="city-title">City: <span>{data.name}</span></h1>
+        <p><strong>Description:</strong> {data.description}</p>
+        <p><strong>Tip:</strong> {data.tips}</p>
+      </div>
+    )}
+  </div>
   )
 }
 
