@@ -62,3 +62,11 @@ export const destinations = [
     tips: "Go scuba diving at Havelock Island and visit Cellular Jail."
   }
 ];
+
+export const titles = {
+   "/" : "Tourism site",
+   "/destinations" : "Destinations",
+   "/destinations/:id" : "DestinationDetalis", 
+   "/plan-trip" : "Plan Trip",
+   "/*" : "Error Page"
+};
