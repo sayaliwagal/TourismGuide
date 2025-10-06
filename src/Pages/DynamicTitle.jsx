@@ -16,6 +16,9 @@ const DynamicTitle = () => {
                 newTitle = ` ${id}`
             }
         }
+        if(!newTitle){
+            newTitle = titles["/*"] || "Page not found";
+        }
         document.title = newTitle
     }, [location.pathname]);
 
